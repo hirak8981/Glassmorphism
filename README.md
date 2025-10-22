@@ -5,7 +5,8 @@ Complete Guide A modern Shiny application demonstrating \*\*glassmorphism design
 ### Navigate and run
 
 ```         
-setwd("shiny_glassmorphism_app") shiny::runApp() 
+setwd("shiny_glassmorphism_app")
+shiny::runApp() 
 ```
 
 All other packages (`shiny`, `bslib`, `colourpicker`) auto-install via `pacman` on first run.
@@ -103,7 +104,8 @@ box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 #### 5. Vibrant Background Requirement
 
 ``` css
-body {   background: linear-gradient(135deg, #0a192f 0%, #1a365d 50%, #2d5a87 100%);   background-attachment: fixed; } 
+body { background: linear-gradient(135deg, #0a192f 0%, #1a365d 50%, #2d5a87 100%);
+background-attachment: fixed; } 
 ```
 
 #### 6. Layering and Hierarchy
@@ -134,10 +136,10 @@ background: rgba(255, 255, 255, 0.15); }
 ### 🎞️ CSS Animations
 
 ``` css
-@keyframes fadeInUp {   from {     opacity: 0;     
-transform: translateY(30px);   }   to {     opacity: 1;     
-transform: translateY(0);   } }  
-.glass-card {   animation: fadeInUp 0.8s ease-out; }  
+@keyframes fadeInUp { from { opacity: 0;     
+transform: translateY(30px); }   to { opacity: 1;     
+transform: translateY(0);  } }  
+.glass-card { animation: fadeInUp 0.8s ease-out; }  
 .glass-card:nth-child(1) { animation-delay: 0.1s; } 
 .glass-card:nth-child(2) { animation-delay: 0.2s; } 
 .glass-card:nth-child(3) { animation-delay: 0.3s; } 
@@ -149,7 +151,8 @@ transform: translateY(0);   } }
 
 ``` javascript
 Shiny.addCustomMessageHandler("updateGlass", function(message) {   
-  document.querySelector(".glass-card").style.backdropFilter =     `blur(${message.blur}px) saturate(${message.saturation}%)`; }); 
+  document.querySelector(".glass-card").style.backdropFilter =  `blur(${message.blur}px) saturate(${message.saturation}%)`;
+}); 
 ```
 
 ### 2. 3D Hover Effects
@@ -168,7 +171,7 @@ card.addEventListener("mousemove", function(e) {
 
 **Full Interaction Flow:**
 
-```{mermaid}
+```mermaid
 flowchart LR
     A[User moves slider] --> B[R detects input change]
     B --> C[R sends updated CSS via sendCustomMessage()]
@@ -183,19 +186,29 @@ flowchart LR
 ### Change Theme Colors (`R/theme.R`)
 
 ```         
-app_theme <- bs_theme(   version = 5,   bg = "#your-background",   fg = "#your-text-color",   primary = "#your-primary-color",   secondary = "#your-secondary-color" ) 
+app_theme <- bs_theme(version = 5,
+ bg = "#your-background",
+fg = "#your-text-color",
+primary = "#your-primary-color",
+secondary = "#your-secondary-color" ) 
 ```
 
 ### Adjust Defaults
 
 ```         
-default_glass_settings <- list(   blur = 20,   opacity = 0.2,   color = "#ffffff",   saturation = 180,   border_opacity = 0.3 ) 
+default_glass_settings <- list( blur = 20,
+opacity = 0.2,
+color = "#ffffff",
+saturation = 180,
+border_opacity = 0.3 ) 
 ```
 
 ### Add Feature Cards (`R/data.R`)
 
 ```         
-feature_cards <- list(   list(     title = "New Feature",     description = "Your description here",     icon_class = "icon-name"   ) ) 
+feature_cards <- list(list(title = "New Feature",
+description = "Your description here",
+icon_class = "icon-name" ) ) 
 ```
 
 ## ⚡ Best Practices
@@ -209,13 +222,20 @@ feature_cards <- list(   list(     title = "New Feature",     description = "You
 ### Accessibility
 
 ```         
-.glass-card {   background: rgba(255, 255, 255, 0.25);   color: #ffffff;   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); } 
+.glass-card {background: rgba(255, 255, 255, 0.25);
+color: #ffffff;
+text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); } 
 ```
 
 ### Browser Fallback
 
 ```         
-.glass-card {   background: rgba(255, 255, 255, 0.8); }  @supports (backdrop-filter: blur(10px)) {   .glass-card {     background: rgba(255, 255, 255, 0.15);     backdrop-filter: blur(15px);     -webkit-backdrop-filter: blur(15px);   } } 
+.glass-card {background: rgba(255, 255, 255, 0.8); }
+@supports (backdrop-filter: blur(10px)) {
+.glass-card {
+background: rgba(255, 255, 255, 0.15);
+backdrop-filter: blur(15px);
+-webkit-backdrop-filter: blur(15px);   } } 
 ```
 
 ## 🧪 Interactive Demo Features
