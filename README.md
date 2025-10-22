@@ -166,20 +166,20 @@ card.addEventListener("mousemove", function(e) {
 
 ## 🔄 How CSS & JavaScript Work Together
 
-**CSS handles** rendering and visuals.\
+**CSS handles** rendering and visuals.
 **JavaScript handles** logic, reactivity, and DOM manipulation.
 
 **Full Interaction Flow:**
 
 ```mermaid
-flowchart LR
+flowchart TD
     A[User moves slider] --> B[R detects input change]
-    B --> C[R sends updated CSS via sendCustomMessage()]
+    B --> C[R sends updated CSS via sendCustomMessage] 
     C --> D[JavaScript applies styles to DOM]
     D --> E[Browser re-renders blurred glass]
     E --> F[Instant visual feedback]
-
 ```
+
 
 ## 🧩 Customization Guide
 
