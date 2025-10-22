@@ -36,27 +36,10 @@ UI and server are separated. External CSS/JS files keep styling and interactivit
 **How it works:**\
 When you run `shiny::runApp()`, Shiny automatically loads:
 
-1.  
-
-2.  
-
-    `global.R` — installs packages and sources helper files
-
-3.  
-
-4.  
-
-    `ui.R` — builds the interface and includes CSS/JS
-
-5.  
-
-6.  
-
-    `server.R` — handles logic and reactivity
-
-7.  
-
-Files in `www/` are served automatically at the root URL.
+1.  `global.R` — installs packages and sources helper files
+2.  `ui.R` — builds the interface and includes CSS/JS
+3.   `server.R` — handles logic and reactivity
+4.   Files in `www/` are served automatically at the root URL.
 
 ## 💎 What is Glassmorphism?
 
@@ -237,43 +220,18 @@ feature_cards <- list(   list(     title = "New Feature",     description = "You
 
 ## 🧪 Interactive Demo Features
 
--   
+- **Blur Amount:** 0–30px
 
--   
+- **Opacity:** 0–1
 
-    **Blur Amount:** 0–30px
+- **Saturation:** 100–200% 
 
--   
+- **Border Opacity:** 0–1
 
--   
+- **Reset Button:** Restores defaults
 
-    **Opacity:** 0–1
+- **Real-time Preview:** Live visual updates via R ↔ JS
 
--   
-
--   
-
-    **Saturation:** 100–200%
-
--   
-
--   
-
-    **Border Opacity:** 0–1
-
--   
-
--   
-
-    **Reset Button:** Restores defaults
-
--   
-
--   
-
-    **Real-time Preview:** Live visual updates via R ↔ JS
-
--   
 
 ## 🧰 Troubleshooting
 
@@ -293,103 +251,18 @@ feature_cards <- list(   list(     title = "New Feature",     description = "You
 |     | JS not loading    |     | Verify `www/` path & Shiny version |     |
 |     |                   |     |                                    |     |
 
-## 📚 Learning Resources
-
-**Generators**
-
--   
-
--   
-
-    [css.glass](https://css.glass/)
-
--   
-
--   
-
-    [ui.glass](https://ui.glass/)
-
--   
-
--   
-
-    [Hype4 Academy](https://hype4.academy/tools/glassmorphism-generator)
-
--   
-
-**Documentation**
-
--   
-
--   
-
-    [MDN: backdrop-filter](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter)
-
--   
-
--   
-
-    [Shiny Custom JS Guide](https://shiny.posit.co/r/articles/build/js-custom/)
-
--   
-
--   
-
-    [bslib Docs](https://rstudio.github.io/bslib/)
-
--   
-
-**Tutorials**
-
--   
-
--   
-
-    [FreeCodeCamp: Glassmorphism Guide](https://www.freecodecamp.org/news/glassmorphism-design-effect-with-html-css/)
-
--   
-
--   
-
-    [LogRocket: Implement Glassmorphism](https://blog.logrocket.com/implement-glassmorphism-css/)
-
--   
-
--   
-
-    [NN Group: Best Practices](https://www.nngroup.com/articles/glassmorphism/)
-
--   
 
 ## 🧭 Key Takeaways
 
-1.  
+1.  **CSS** builds the glass effect
 
-2.  
+2.  **JavaScript** makes it interactive
 
-    **CSS** builds the glass effect
+3.  **Vibrant backgrounds** are essential
 
-3.  
+4.   **Layering & depth** enhance realism
 
-4.  
-
-    **JavaScript** makes it interactive
-
-5.  
-
-6.  
-
-    **Vibrant backgrounds** are essential
-
-7.  
-
-8.  
-
-    **Layering & depth** enhance realism
-
-9.  
-
-### Technology Synergy
+5.  ### Technology Synergy
 
 |     |                 |     |                        |     |
 |-----|-----------------|-----|------------------------|-----|
@@ -409,44 +282,3 @@ feature_cards <- list(   list(     title = "New Feature",     description = "You
 
 This Shiny app demonstrates how **CSS builds the frosted visual foundation**, **JavaScript adds real-time interactivity**, and **Shiny connects them through reactivity** — resulting in a **modern, glassmorphic interface**.
 
-**Getting Started**
-
-1.  
-
-2.  
-
-    Run with `shiny::runApp()`
-
-3.  
-
-4.  
-
-    Explore sliders to tweak blur, opacity, saturation
-
-5.  
-
-6.  
-
-    Review code for integration patterns
-
-7.  
-
-8.  
-
-    Customize colors and layouts
-
-9.  
-
-10. 
-
-    Build your own glassmorphic apps!
-
-11. 
-
-**Version:** 1.0\
-**Last Updated:** October 2025\
-**Built with:** `Shiny`, `bslib`, `Bootstrap 5`, `pacman`, `colourpicker`
-
-```         
- ---  Would you like me to include **badges** (e.g., R version, license, or Shiny logo) at the top for a more polished GitHub appearance? 
-```
